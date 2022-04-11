@@ -8,11 +8,15 @@
   "routes": {
     "testPolicieService": {
       "path": "/_v/test-policies-service-route",
-      "public": true
-    },
-    "testPolicie": {
-      "path": "/_v/test-policies-route",
-      "public": true
+      "public": false,
+      "access": "authorized",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["get"],
+          "principals": ["vrn:apps:*:*:*:app/vtex.policies-example-3@*"]
+        }
+      ]
     }
   }
 }

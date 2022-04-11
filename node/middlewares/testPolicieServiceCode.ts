@@ -3,7 +3,7 @@ export async function testPolicieServiceCode(ctx: Context) {
     clients: { f1 },
   } = ctx
 
-  const retorno = await f1.getConstructor()
+  const retorno = await f1.getDrivers()
 
   ctx.status = 200
   ctx.body = retorno
